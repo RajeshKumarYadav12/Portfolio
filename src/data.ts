@@ -120,18 +120,5 @@ export const portfolioData = {
     { title: "GeeksforGeeks", "value": "Rank 1", context: "Ranked 1st in College with 750+ problems solved." },
     { title: "Cyber Sleuth", "value": "1st Place", context: "Secured 1st place in Cyber Sleuth Competition." }
   ],
-  education: [
-    {
-      institution: "Indian Institute of Information Technology Senapati, Manipur",
-      degree: "B.Tech in Computer Science",
-      dates: "2022 - 2026",
-      details: "CGPA: 8.08 (Till 6th Sem)"
-    },
-    {
-      institution: "M.L.S.M. College",
-      degree: "Class 11 & 12, Computer Science",
-      dates: "2019 - 2021"
-    }
-  ],
   certifications: ["Introduction to MongoDB"]
 };
