@@ -21,6 +21,7 @@ import {
 import { portfolioData } from './data';
 import { AnimatedBackground } from './components/AnimatedBackground';
 import { Splash } from './components/Splash';
+import { ContactForm } from './components/ContactForm';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { useNavigate } from 'react-router-dom';
@@ -52,7 +53,7 @@ export default function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'experience', 'achievements', 'projects', 'skills'];
+      const sections = ['hero', 'experience', 'achievements', 'projects', 'skills', 'contact'];
       const scrollPos = window.scrollY + 200;
 
       for (const section of sections) {
@@ -77,7 +78,7 @@ export default function App() {
 
   return (
     <div className={cn(
-      "min-h-screen transition-colors duration-500 selection:bg-emerald-500/30 selection:text-emerald-400",
+      "min-h-screen overflow-x-hidden transition-colors duration-500 selection:bg-emerald-500/30 selection:text-emerald-400",
       theme === 'dark' ? "bg-black text-white" : "bg-pure-white text-slate-900"
     )}>
       <AnimatePresence>
@@ -94,11 +95,11 @@ export default function App() {
           
           {/* Navigation */}
           <nav className={cn(
-            "fixed top-6 left-1/2 -translate-x-1/2 z-50 px-6 md:px-12 py-3 backdrop-blur-xl border rounded-full flex items-center gap-6 md:gap-12 transition-all duration-300",
+            "fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 z-50 px-4 sm:px-6 md:px-12 py-2.5 sm:py-3 backdrop-blur-xl border rounded-full flex items-center gap-4 md:gap-12 transition-all duration-300 max-w-[calc(100vw-2rem)]",
             theme === 'dark' ? "bg-white/5 border-white/10" : "bg-alice-blue/50 border-black/10"
           )}>
             <div className="hidden md:flex items-center gap-8">
-              {['Hero', 'Experience', 'Achievements', 'Projects', 'Skills'].map((item) => (
+              {['Hero', 'Experience', 'Achievements', 'Projects', 'Skills', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollTo(item.toLowerCase())}
@@ -146,7 +147,7 @@ export default function App() {
                   theme === 'dark' ? "bg-black/90" : "bg-pure-white/90"
                 )}
               >
-                {['Hero', 'Experience', 'Achievements', 'Projects', 'Skills'].map((item) => (
+                {['Hero', 'Experience', 'Achievements', 'Projects', 'Skills', 'Contact'].map((item) => (
                   <button
                     key={item}
                     onClick={() => {
@@ -167,13 +168,13 @@ export default function App() {
 
           <main className="relative z-10">
             {/* Hero Section */}
-            <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 text-center">
+            <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 text-center pt-24 md:pt-0">
               <motion.h1
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
                 className={cn(
-                  "text-5xl md:text-8xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b",
+                  "text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-tight mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b",
                   theme === 'dark' ? "from-white to-white/100" : "from-slate-900 to-slate-500"
                 )}
               >
@@ -184,7 +185,7 @@ export default function App() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="text-emerald-500 font-mono text-sm md:text-lg mb-8 max-w-2xl font-bold"
+                className="text-emerald-500 font-mono text-xs sm:text-sm md:text-lg mb-6 sm:mb-8 max-w-2xl font-bold px-4"
               >
                 {portfolioData.basics.title}
               </motion.p>
@@ -194,7 +195,7 @@ export default function App() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5 }}
                 className={cn(
-                  "text-sm md:text-base max-w-4xl mb-12 leading-relaxed",
+                  "text-sm md:text-base max-w-4xl mb-8 md:mb-12 leading-relaxed px-2",
                   theme === 'dark' ? "text-white/60" : "text-slate-600"
                 )}
               >
@@ -264,7 +265,7 @@ export default function App() {
               "py-12 border-y backdrop-blur-sm",
               theme === 'dark' ? "border-white/5 bg-white/[0.02]" : "border-black/5 bg-ghost-white"
             )}>
-              <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                 {portfolioData.achievements.slice(0, 4).map((stat, i) => (
                   <motion.div
                     key={i}
@@ -285,13 +286,13 @@ export default function App() {
             </div>
 
             {/* Experience Section */}
-            <section id="experience" className="py-32 px-6 max-w-5xl mx-auto">
+            <section id="experience" className="py-16 md:py-32 px-4 sm:px-6 max-w-5xl mx-auto">
               <div className="flex items-center gap-4 mb-16">
                 <div className="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/20">
                   <Briefcase className="w-6 h-6 text-emerald-500" />
                 </div>
                 <div>
-                  <h2 className="text-3xl font-black tracking-tight">Professional Experiences</h2>
+                  <h2 className="text-2xl sm:text-3xl font-black tracking-tight">Professional Experiences</h2>
                   <p className={cn(
                     "text-sm font-mono uppercase tracking-widest",
                     theme === 'dark' ? "text-white/40" : "text-slate-400"
@@ -354,7 +355,7 @@ export default function App() {
 
             {/* Achievements Section */}
             <section id="achievements" className={cn(
-              "py-32 px-6",
+              "py-16 md:py-32 px-4 sm:px-6",
               theme === 'dark' ? "bg-white/[0.02]" : "bg-ghost-white"
             )}>
               <div className="max-w-7xl mx-auto">
@@ -363,7 +364,7 @@ export default function App() {
                     <Trophy className="w-6 h-6 text-emerald-500" />
                   </div>
                   <div>
-                    <h2 className="text-3xl font-black tracking-tight">Milestones & Wins</h2>
+                    <h2 className="text-2xl sm:text-3xl font-black tracking-tight">Milestones & Wins</h2>
                     <p className={cn(
                       "text-sm font-mono uppercase tracking-widest",
                       theme === 'dark' ? "text-white/40" : "text-slate-400"
@@ -380,7 +381,7 @@ export default function App() {
                       viewport={{ once: true }}
                       whileHover={{ y: -10 }}
                       className={cn(
-                        "p-8 rounded-3xl border transition-all duration-500 group relative overflow-hidden",
+                        "p-6 sm:p-8 rounded-3xl border transition-all duration-500 group relative overflow-hidden",
                         theme === 'dark' ? "bg-white/[0.03] border-white/10 hover:border-emerald-500/50" : "bg-white-smoke border-black/5 shadow-xl shadow-black/5 hover:border-emerald-500/50"
                       )}
                     >
@@ -403,13 +404,13 @@ export default function App() {
             </section>
 
             {/* Projects Section */}
-            <section id="projects" className="py-32 px-6 max-w-7xl mx-auto">
+            <section id="projects" className="py-16 md:py-32 px-4 sm:px-6 max-w-7xl mx-auto">
               <div className="flex items-center gap-4 mb-16">
                 <div className="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/20">
                   <Code2 className="w-6 h-6 text-emerald-500" />
                 </div>
                 <div>
-                  <h2 className="text-3xl font-black tracking-tight">Featured Works</h2>
+                  <h2 className="text-2xl sm:text-3xl font-black tracking-tight">Personal Projects</h2>
                   <p className={cn(
                     "text-sm font-mono uppercase tracking-widest",
                     theme === 'dark' ? "text-white/40" : "text-slate-400"
@@ -461,7 +462,7 @@ export default function App() {
 
             {/* Skills Section */}
             <section id="skills" className={cn(
-              "py-32 px-6",
+              "py-16 md:py-32 px-4 sm:px-6",
               theme === 'dark' ? "bg-white/[0.02]" : "bg-ghost-white"
             )}>
               <div className="max-w-7xl mx-auto">
@@ -470,7 +471,7 @@ export default function App() {
                     <Cpu className="w-6 h-6 text-emerald-500" />
                   </div>
                   <div>
-                    <h2 className="text-3xl font-black tracking-tight">Technical Arsenal</h2>
+                    <h2 className="text-2xl sm:text-3xl font-black tracking-tight">Technical Arsenal</h2>
                     <p className={cn(
                       "text-sm font-mono uppercase tracking-widest",
                       theme === 'dark' ? "text-white/40" : "text-slate-400"
@@ -486,7 +487,7 @@ export default function App() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       className={cn(
-                        "p-8 rounded-3xl border transition-all duration-300",
+                          "p-6 sm:p-8 rounded-3xl border transition-all duration-300",
                         theme === 'dark' ? "bg-white/[0.03] border-white/10" : "bg-white-smoke border-black/5 shadow-xl shadow-black/5"
                       )}
                     >
@@ -510,9 +511,55 @@ export default function App() {
               </div>
             </section>
 
+            {/* Contact Section */}
+            <section id="contact" className="py-16 md:py-32 px-4 sm:px-6">
+              <div className="max-w-5xl mx-auto">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="flex items-center gap-4 mb-6 justify-center"
+                >
+                  <div className="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/20">
+                    <Mail className="w-6 h-6 text-emerald-500" />
+                  </div>
+                  <div className="text-center">
+                    <h2 className="text-2xl sm:text-3xl font-black tracking-tight">Get In Touch</h2>
+                    <p className={cn(
+                      "text-sm font-mono uppercase tracking-widest",
+                      theme === 'dark' ? "text-white/40" : "text-slate-400"
+                    )}>Let's build something great</p>
+                  </div>
+                </motion.div>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className={cn(
+                    "text-center text-sm max-w-xl mx-auto mb-12 leading-relaxed",
+                    theme === 'dark' ? "text-white/50" : "text-slate-500"
+                  )}
+                >
+                  Have a project in mind, an opportunity to discuss, or just want to say hello?
+                  Fill in the form below and I'll respond as soon as possible.
+                </motion.p>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.15 }}
+                >
+                  <ContactForm theme={theme} />
+                </motion.div>
+              </div>
+            </section>
+
             {/* Footer */}
             <footer className={cn(
-              "py-20 px-6 border-t transition-colors duration-500",
+              "py-12 md:py-20 px-4 sm:px-6 border-t transition-colors duration-500",
               theme === 'dark' ? "bg-black border-white/5" : "bg-pure-white border-black/5"
             )}>
               <div className="max-w-7xl mx-auto">
