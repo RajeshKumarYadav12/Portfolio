@@ -14,19 +14,30 @@ export const portfolioData = {
   },
   experience: [
     {
-      company: "AVA Technology",
-      role: "Web Development Intern",
-      dates: "Nov 2025 - Present",
+      company: "Connectia Technologies",
+      role: "Full Stack Developer",
+      dates: "APR 2026 - Present",
       location: "Remote",
       bullets: [
-        "Contributing to end-to-end web development projects using modern JavaScript frameworks, building responsive and accessible UI components aligned with product requirements.",
+        "Contributing to end-to-end Full Stack development projects using modern JavaScript frameworks, building responsive and accessible UI components aligned with product requirements.",
         "Collaborating with senior developers to implement new features, perform code reviews, and maintain code quality through best practices and consistent documentation.",
         "Participating in sprint planning and Agile ceremonies, translating design mockups into production-ready interfaces with attention to performance and cross-browser compatibility."
       ]
     },
     {
+      company: "VAID PUBLIC RELATIONS",
+      role: "Full Stack Developer ",
+      dates: "Jan 2026 - Mar 2026",
+      location: "Remote",
+      bullets: [
+      "Developed and maintained full-stack features across the platform, contributing to both frontend interfaces and backend APIs, improving overall application performance and user engagement.",
+      "Designed and implemented RESTful APIs, handled authentication flows, and optimized server-side logic, reducing response time and ensuring efficient data processing.",
+      "Collaborated with cross-functional teams to build responsive UI components, debug production issues, and optimize web applications for scalability, performance, and seamless user experience across devices."
+    ],
+    },
+    {
       company: "Site Guru",
-      role: "Software Developer Intern",
+      role: "Full Stack Developer Intern",
       dates: "Apr 2025 - Oct 2025",
       location: "Remote",
       bullets: [
@@ -38,7 +49,7 @@ export const portfolioData = {
     {
       company: "CollegeTips.in",
       role: "Web Development Intern",
-      dates: "Aug 2024 - Oct 2024",
+      dates: "Sep 2024 - Dec 2024",
       location: "Remote",
       bullets: [
         "Developed and maintained dynamic web features for the platform, improving user engagement through enhanced UI/UX and functional enhancements.",
@@ -115,10 +126,26 @@ export const portfolioData = {
     "DevOps": ["Git", "CI/CD", "Docker", "Kubernetes", "AWS", "GCP", "Vercel", "Render"]
   },
   achievements: [
-    { title: "Codeforces", value: "1850+", context: "Demonstrating strong algorithmic and problem-solving ability." },
-    { title: "LeetCode", value: "2050", context: "Peak rating, solved 650+ problems in DSA, DP, Graphs, and Greedy algorithms." },
-    { title: "GeeksforGeeks", "value": "Rank 1", context: "Ranked 1st in College with 750+ problems solved." },
-    { title: "Cyber Sleuth", "value": "1st Place", context: "Secured 1st place in Cyber Sleuth Competition." }
+  { 
+    title: "GeeksforGeeks", 
+    value: "Rank 1", 
+    context: "Ranked 1st in college with 850+ problems solved." 
+  },
+  { 
+    title: "LeetCode", 
+    value: "Knight (1945)", 
+    context: "Solved 650+ DSA problems across graphs, DP, and greedy algorithms." 
+  },
+  { 
+    title: "Coding Ninjas (Code360)", 
+    value: "320+ Problems", 
+    context: "Solved 320+ problems covering core data structures and algorithms." 
+  },
+  { 
+    title: "Cyber Sleuth Competition", 
+    value: "1st Place", 
+    context: "Secured 1st position in a cybersecurity-based competition." 
+  }
   ],
   certifications: ["Introduction to MongoDB"]
 };
