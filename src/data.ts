@@ -24,17 +24,17 @@ export const portfolioData = {
         "Participating in sprint planning and Agile ceremonies, translating design mockups into production-ready interfaces with attention to performance and cross-browser compatibility."
       ]
     },
-    {
-      company: "VAID PUBLIC RELATIONS",
-      role: "Full Stack Developer ",
-      dates: "Jan 2026 - Mar 2026",
-      location: "Remote",
-      bullets: [
-      "Developed and maintained full-stack features across the platform, contributing to both frontend interfaces and backend APIs, improving overall application performance and user engagement.",
-      "Designed and implemented RESTful APIs, handled authentication flows, and optimized server-side logic, reducing response time and ensuring efficient data processing.",
-      "Collaborated with cross-functional teams to build responsive UI components, debug production issues, and optimize web applications for scalability, performance, and seamless user experience across devices."
-    ],
-    },
+    // {
+    //   company: "VAID PUBLIC RELATIONS",
+    //   role: "Full Stack Developer ",
+    //   dates: "Jan 2026 - Mar 2026",
+    //   location: "Remote",
+    //   bullets: [
+    //   "Developed and maintained full-stack features across the platform, contributing to both frontend interfaces and backend APIs, improving overall application performance and user engagement.",
+    //   "Designed and implemented RESTful APIs, handled authentication flows, and optimized server-side logic, reducing response time and ensuring efficient data processing.",
+    //   "Collaborated with cross-functional teams to build responsive UI components, debug production issues, and optimize web applications for scalability, performance, and seamless user experience across devices."
+    // ],
+    // },
     {
       company: "Site Guru",
       role: "Full Stack Developer Intern",
@@ -46,28 +46,28 @@ export const portfolioData = {
         "Designed data processing modules emphasizing efficient memory usage and clean modular object-oriented design principles."
       ]
     },
-    {
-      company: "CollegeTips.in",
-      role: "Web Development Intern",
-      dates: "Sep 2024 - Dec 2024",
-      location: "Remote",
-      bullets: [
-        "Developed and maintained dynamic web features for the platform, improving user engagement through enhanced UI/UX and functional enhancements.",
-        "Implemented client-side form validation, interactive components, and optimized page-load performance by refactoring legacy JavaScript and reducing render-blocking resources.",
-        "Collaborated with the design team to translate wireframes into pixel-perfect, responsive HTML/CSS layouts, ensuring consistency across mobile and desktop viewports."
-      ]
-    },
-    {
-      company: "COSMIC365",
-      role: "Frontend Developer Intern",
-      dates: "Jun 2024 - Aug 2024",
-      location: "Remote",
-      bullets: [
-        "Developed reusable and scalable UI component libraries using React.js and TypeScript, following modular architecture and clean code principles.",
-        "Implemented responsive layouts, accessibility (a11y) best practices, and performance optimization techniques (lazy loading, memoization, code splitting).",
-        "Improved cross-browser compatibility in Agile development environments."
-      ]
-    }
+    // {
+    //   company: "CollegeTips.in",
+    //   role: "Web Development Intern",
+    //   dates: "Sep 2024 - Dec 2024",
+    //   location: "Remote",
+    //   bullets: [
+    //     "Developed and maintained dynamic web features for the platform, improving user engagement through enhanced UI/UX and functional enhancements.",
+    //     "Implemented client-side form validation, interactive components, and optimized page-load performance by refactoring legacy JavaScript and reducing render-blocking resources.",
+    //     "Collaborated with the design team to translate wireframes into pixel-perfect, responsive HTML/CSS layouts, ensuring consistency across mobile and desktop viewports."
+    //   ]
+    // },
+    // {
+    //   company: "COSMIC365",
+    //   role: "Frontend Developer Intern",
+    //   dates: "Jun 2024 - Aug 2024",
+    //   location: "Remote",
+    //   bullets: [
+    //     "Developed reusable and scalable UI component libraries using React.js and TypeScript, following modular architecture and clean code principles.",
+    //     "Implemented responsive layouts, accessibility (a11y) best practices, and performance optimization techniques (lazy loading, memoization, code splitting).",
+    //     "Improved cross-browser compatibility in Agile development environments."
+    //   ]
+    // }
   ],
   projects: [
     {
